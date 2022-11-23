@@ -11,6 +11,13 @@ pipeline {
             }
 
         }
+        stage('Buil Docker Image'){
+            steps{
+                script{
+                    sh 'docker build -t devops-demo/devops-integration .'
+                }
+            }
+        }
     }
     
 }
