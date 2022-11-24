@@ -14,7 +14,8 @@ pipeline {
         stage('Buil Docker Image'){
             steps{
                 script{
-                    sh 'docker build -t devops-demo/devops-integration .'
+                    sh 'docker build -t mikeybabs/devops-integration .'
+                    sh 'docker tag v1 mikeybabs/devops-integration'
                 }
             }
         }
@@ -25,7 +26,7 @@ pipeline {
                     sh 'docker login -u "mikeybabs"  -p ${DOCKER_HUB_PWD}'
                     
 
-                    sh 'docker push devops-demo/devops-integration'
+                    sh 'docker push mikeybabs/devops-integration'
 
                     }
                 }
