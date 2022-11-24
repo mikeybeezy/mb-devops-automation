@@ -22,9 +22,9 @@ pipeline {
             steps{
                 script{
                     withCredentials([string(credentialsId: 'Docker-Hub-Credentials', variable: 'DOCKER_HUB_PWD')]) {
-                    sh 'docker login -u mikeybabs40@gmail.com -p ${DOCKER_HUB_PWD}'
+                    sh 'docker login -u 'mikeybabs' -p ${DOCKER_HUB_PWD}'
 
-                    sh ' docker push devops-demo/devops-integration'
+                    sh 'docker push devops-demo/devops-integration'
 
                     }
                 }
