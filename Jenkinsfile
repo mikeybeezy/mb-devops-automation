@@ -15,7 +15,7 @@ pipeline {
             steps{
                 script{
                     sh 'docker build -t mikeybabs/devops-integration .'
-                    sh 'docker tag v1 mikeybabs/devops-integration'
+                   
                 }
             }
         }
